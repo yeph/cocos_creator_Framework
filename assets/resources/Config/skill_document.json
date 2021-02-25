@@ -1,0 +1,14 @@
+{
+    "id" : "技能ID",
+    "name" : "技能名字",
+    "desc" : "技能描述",
+    "caster" : "施法者",
+    "target" : "施法目标",
+    "target_amount" : "施法模板数量",
+    "radius" : "施法距离/施法范围",
+    "formula" : "计算公式",
+    "grow_type" : "成长类型",
+    "grow_function" : "成长公式",
+    "grow_params" : "",
+    "grow_list" : ""
+}

@@ -1,0 +1,21 @@
+{
+    "_notes_" : {
+        "asset_type_enum" : ["Asset", "SpriteFrame", "Prefab", "SpriteAtlas", "SkeletonData"],
+        "load_type_enum" : ["dir", "single"]
+    },
+
+    "Login" : [
+        {"url":["Config"], "load_type" : "dir", "asset_type" : "JsonAsset", "isStatic" : 1},
+        {"url":["Spine/yu1"], "load_type" : "single", "asset_type" : "SkeletonData", "isStatic" : 0},
+        {"url":["Texture/soldier/qibing_down_go_green_00"], "load_type" : "single", "asset_type" : "SpriteAtlas"}
+    ],
+
+    "Hall" : [
+        {"url":["Config/skill"], "load_type" : "dir", "asset_type" : "JsonAsset", "isStatic" : 1}
+    ],
+
+    "IGame" : [
+        {"url":["Texture/soldier"], "load_type" : "dir", "asset_type" : "SpriteFrame"},
+        {"url":["Texture/soldier"], "load_type" : "dir", "asset_type" : "SpriteAtlas"}
+    ]
+}

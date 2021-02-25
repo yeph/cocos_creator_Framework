@@ -1,0 +1,22 @@
+{
+    "id" : 6,
+    "name" : "反击",
+    "caster" : "caster",
+    "target" : "enemy",
+    "target_amount" : 1,
+    "radius" : 1,
+    "caster_time" : 0.3,
+    "type" : 1,
+    "actions" : [
+        "damage = damage_func(@caster_attack, @target_armor)",
+        "attribute_func(@target_id, #'health', -@damage, @caster_id)",
+        "attribute_func(@caster_id, #'health', @damage, @caster_id)"
+    ],
+    "trigger" : [
+        {
+            "event_name" : "modify_attribute",
+            "condition" : "attribute_key=#'health', value<0, actor_id=@caster_id", 
+            "actions" : []
+        }
+    ]
+}

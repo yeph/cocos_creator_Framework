@@ -1,0 +1,10 @@
+{
+    "id" : 4,
+    "name" : "死亡缠绕",
+    "caster" : "caster",
+    "target" : "team||enemy",
+    "target_amount" : 1,
+    "radius" : 1,
+    "formula" : "health_function||damage_function2",
+    "formula_parameter" : "caster_attack,target_armor||caster_attack,target_armor"
+}

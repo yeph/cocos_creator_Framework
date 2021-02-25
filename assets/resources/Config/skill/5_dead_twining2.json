@@ -1,0 +1,14 @@
+{
+    "id" : 5,
+    "name" : "吸血",
+    "caster" : "caster",
+    "target" : "enemy",
+    "target_amount" : 1,
+    "radius" : 1,
+    "caster_time" : 0.3,
+    "actions" : [
+        "damage = damage_func(@caster_attack, @target_armor)",
+        "attribute_func(@target_id, #'health', -@damage, @caster_id)",
+        "attribute_func(@caster_id, #'health', @damage, @caster_id)"
+    ]
+}

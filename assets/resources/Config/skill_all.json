@@ -1,0 +1,56 @@
+[
+    {    
+        "id" : 0,
+        "name" : "普通攻击",
+        "desc" : "",
+        "type" : 0,
+        "caster" : "caster",
+        "target" : "enemy",
+        "target_amount" : 1,
+        "radius" : 1,
+        "caster_time" : 0.3, 
+        "class_name" : "BaseDamage"
+    },
+    {    
+        "id" : 1,
+        "name" : "初级治愈术",
+        "desc" : "",
+        "type" : 0,
+        "caster" : "caster",
+        "target" : "caster",
+        "target_amount" : 1,
+        "radius" : 1,
+        "caster_time" : 0.3,
+        "params" : [2, 4, 0], 
+        "class_name" : "BaseHealth"
+    },
+    {    
+        "id" : 3,
+        "name" : "保护罩",
+        "desc" : "",
+        "type" : 1,
+        "caster" : "caster",
+        "target" : "caster",
+        "target_amount" : 1,
+        "radius" : 1,
+        "caster_time" : 0.3,
+        "class_name" : "BaseExtraAttri",
+        "params" : [2, 0, 0],
+        "attri_name" : "armor", 
+        "trigger" : [
+            { "event_name" : "start", "delay" : -1}
+        ]
+    },
+    {    
+        "id" : 10000,
+        "name" : "群体攻击",
+        "desc" : "",
+        "type" : 0,
+        "caster" : "caster",
+        "target" : "enemy",
+        "target_amount" : -1,
+        "radius" : 1,
+        "caster_time" : 0.3, 
+        "class_name" : "BaseDamage"
+    }
+]

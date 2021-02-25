@@ -1,0 +1,17 @@
+{
+  "ver": "1.0.25",
+  "uuid": "28db0f09-0c2e-4408-9df9-ef134f42d31b",
+  "compiledShaders": [
+    {
+      "glsl1": {
+        "vert": "uniform mat4 cc_matViewProj;\nprecision highp float;\nattribute vec3 a_position;\n#if USE_TEXTURE\nattribute vec2 a_uv0;\nvarying vec2 v_uv0;\n#endif\nvoid main () {\n  gl_Position = cc_matViewProj * vec4(a_position, 1);\n  #if USE_TEXTURE\n  v_uv0 = a_uv0;\n  #endif\n}",
+        "frag": "\nprecision highp float;\n#if USE_TEXTURE\nvarying vec2 v_uv0;\nuniform sampler2D texture;\n#endif\nuniform vec4 UVoffset;\nuniform vec2 u_resolution;\nuniform float time;\nuniform float rotated;\nvec2 s(vec2 p)\n{\n  float d=time*0.2,x=8.*(p.x+d),y=8.*(p.y+d);\n  return vec2(cos(x-y)*cos(y),sin(x+y)*sin(y));\n}\nvoid mainImage( out vec4 fragColor, in vec2 fragCoord )\n{\n  vec2 rs = u_resolution.xy;\n  vec2 uv = fragCoord;\n  vec2 q = uv+2./u_resolution.x*(s(uv)-s(uv+rs));\n  fragColor = texture2D(texture, q);\n}\nvoid main()\n{\n  vec2 UVnormalize;\n  UVnormalize.x = (v_uv0.x-UVoffset.x)/(UVoffset.z-UVoffset.x);\n  UVnormalize.y = (v_uv0.y-UVoffset.y)/(UVoffset.w-UVoffset.y);\n  if(rotated > 0.5)\n  {\n    float temp = UVnormalize.x;\n    UVnormalize.x = UVnormalize.y;\n    UVnormalize.y = 1.0 - temp;\n  }\n  mainImage(gl_FragColor, v_uv0.xy);\n}"
+      },
+      "glsl3": {
+        "vert": "uniform CCGlobal {\n  mat4 cc_matView;\n  mat4 cc_matViewInv;\n  mat4 cc_matProj;\n  mat4 cc_matProjInv;\n  mat4 cc_matViewProj;\n  mat4 cc_matViewProjInv;\n  vec4 cc_cameraPos;\n  vec4 cc_time;\n  mediump vec4 cc_screenSize;\n  mediump vec4 cc_screenScale;\n};\nprecision highp float;\nin vec3 a_position;\n#if USE_TEXTURE\nin vec2 a_uv0;\nout vec2 v_uv0;\n#endif\nvoid main () {\n  gl_Position = cc_matViewProj * vec4(a_position, 1);\n  #if USE_TEXTURE\n  v_uv0 = a_uv0;\n  #endif\n}",
+        "frag": "\nprecision highp float;\n#if USE_TEXTURE\nin vec2 v_uv0;\nuniform sampler2D texture;\n#endif\nuniform ARGS {\n  vec4 UVoffset;\n  vec2 u_resolution;\n  float time;\n  float rotated;\n};\nvec2 s(vec2 p)\n{\n  float d=time*0.2,x=8.*(p.x+d),y=8.*(p.y+d);\n  return vec2(cos(x-y)*cos(y),sin(x+y)*sin(y));\n}\nvoid mainImage( out vec4 fragColor, in vec2 fragCoord )\n{\n  vec2 rs = u_resolution.xy;\n  vec2 uv = fragCoord;\n  vec2 q = uv+2./u_resolution.x*(s(uv)-s(uv+rs));\n  fragColor = texture2D(texture, q);\n}\nvoid main()\n{\n  vec2 UVnormalize;\n  UVnormalize.x = (v_uv0.x-UVoffset.x)/(UVoffset.z-UVoffset.x);\n  UVnormalize.y = (v_uv0.y-UVoffset.y)/(UVoffset.w-UVoffset.y);\n  if(rotated > 0.5)\n  {\n    float temp = UVnormalize.x;\n    UVnormalize.x = UVnormalize.y;\n    UVnormalize.y = 1.0 - temp;\n  }\n  mainImage(gl_FragColor, v_uv0.xy);\n}"
+      }
+    }
+  ],
+  "subMetas": {}
+}

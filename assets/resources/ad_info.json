@@ -1,0 +1,55 @@
+{
+    "1" : {
+        "reward" : {"id" : "945556385"},
+        "interaction" : {"id" : "945556385"},
+        "feed" : {"id" : "945556385"}
+    },
+
+    "2001" : {
+        "reward" : {"id" : "945556385"},
+        "interaction" : {"id" : "945556385"},
+        "banner" : {"id" : "945556385"}
+    },
+
+    "2002" : {
+        "reward" : {"id" : "945556385"},
+        "interaction" : {"id" : "945556385"},
+        "banner" : {"id" : "945556385"}
+    },
+
+    "2003" : {
+        "reward" : {"id" : "945556385"},
+        "interaction" : {"id" : "945556385"},
+        "banner" : {"id" : "945556385"}
+    },
+
+    "tt_android" : {
+        "reward" : {"id" : "945556385"},
+        "interaction" : {"id" : "945556385"},
+        "feed" : {"id" : "945556385"}
+    },
+
+    "qq_mini" : {
+        "reward" : {"id" : "945556385"},
+        "interaction" : {"id" : "945556385"},
+        "banner" : {"id" : "945556385"}
+    },
+
+    "wechat_mini" : {
+        "reward" : {"id" : "945556385"},
+        "interaction" : {"id" : "945556385"},
+        "banner" : {"id" : "945556385"}
+    },
+
+    "bytedance_mini" : {
+        "reward" : {"id" : "945556385"},
+        "interaction" : {"id" : "945556385"},
+        "banner" : {"id" : "945556385"}
+    },
+
+    "vivo_mini" : {
+        "reward" : {"id" : "3804b6c1fc2044dfb8830f8915dc7bf1"},
+        "interaction" : {"id" : "c504af5a4c3b41e5b2a036c669be1605"},
+        "banner" : {"id" : "ffaa07ff2a7e4854adc6618c7bceb1ae"}
+    }
+}

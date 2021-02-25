@@ -1,0 +1,19 @@
+{
+    "id" : 2,
+    "name" : "回血术",
+    "caster" : "caster",
+    "target" : "team",
+    "target_amount" : 1,
+    "radius" : 1,
+    "caster_time" : 0.3,
+    "actions" : [
+        "attribute_func(@target_id, #'health', #20, @caster_id)"
+    ],
+    "formula" : "health_function",
+    "grow_type" : "level",
+    "grow_function" : "equal_difference_function",
+    "grow_params" : [10, 2],
+    "grow_list" : [
+        10, 12, 14, 16
+    ]
+}

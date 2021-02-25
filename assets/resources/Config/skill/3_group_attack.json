@@ -1,0 +1,13 @@
+{
+    "id" : 3,
+    "name" : "群体攻击",
+    "caster" : "caster",
+    "target" : "enemy",
+    "target_amount" : -1,
+    "radius" : 1,
+    "caster_time" : 0.3,
+    "actions" : [
+        "damage222 = damage_func(@caster_attack, @target_armor)",
+        "attribute_func(@target_id, #'health', -@damage222, @caster_id)"
+    ]
+}
